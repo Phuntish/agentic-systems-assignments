@@ -6,6 +6,8 @@ try:
 
     print(n3)
     print(int(n1)/int(n2))
-except Exception:
-    print("input should be numbers and divisor cannot be zero")
+except ValueError:
+    print("Invalid input")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
 
