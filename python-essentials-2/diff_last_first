@@ -1,0 +1,25 @@
+class StudentPerformance:
+    def __init__(self, studentscores):
+        self.scores = studentscores
+
+    
+    def score_difference(self):
+        try:
+            if len(self.scores) == 0 or len(self.scores) == 1:
+                raise ValueError
+            
+            last_score = self.scores[-1]
+            first_score = self.scores[0]
+            return abs(last_score-first_score)
+
+        except ValueError:
+            return("Scores not available to calculate difference")
+
+
+student1 = StudentPerformance([])
+student2 = StudentPerformance([1])
+student3 = StudentPerformance([2,4,6,9])
+
+print(student1.score_difference())
+print(student2.score_difference())
+print(student3.score_difference())
