@@ -1,18 +1,18 @@
-from fastapi import FastAPI, Query
-from pydantic import BaseModel
-from typing import Optional
+from fastapi import FastAPI, Query, Path
+from pydantic import BaseModel, Field
+
 
 #init Fast API
 app = FastAPI()
 
 class SearchParams(BaseModel):
-    name: Optional[str] = None
-    age: Optional[int] = None
+    myname: str = Field(None)
+    myage:int = Field(None)
 
-@app.get("/search")
-def search(params: SearchParams = Query()):
+@app.get("/search/{myname}/{myage}")
+def search(params: SearchParams = Path()):
     return {
-        "name": params.name,
-        "age": params.age
+        "name": params.myname,
+        "age": params.myage
     }
     
