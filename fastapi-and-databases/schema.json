@@ -1,0 +1,26 @@
+{
+    "Book1":{
+        "Author":"Sankar",
+        "Title":"Serious Matter",
+        "CopiesSold": 45
+    },
+
+    "Book2":{
+        "Author":"Robert",
+        "Title":"Sanctimonial",
+        "CopiesSold": 5
+    },
+
+    "Book3":{
+        "Author":"Ryan",
+        "Title":"Linkin Park",
+        "CopiesSold": 42
+    },
+
+    "Book4":{
+        "Author":"Rajesh",
+        "Title":"Polynesia",
+        "CopiesSold":34
+    }
+
+}
